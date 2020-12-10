@@ -5,10 +5,8 @@ data class Curso(val nome: String,
             val qtdMaxAlunos: Int ){
 
     var alunosMatriculados = mutableListOf<Aluno>()
-
     var professorTitular: ProfTitular? = null
     var professorAdj: ProfessorAdj? = null
-
     override fun equals(other: Any?): Boolean {
         if (other is Curso)
             return codCurso == other.codCurso

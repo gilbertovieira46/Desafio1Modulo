@@ -67,7 +67,7 @@ class DigitalHouseManager {
                          val matricula = Matricula(alunoEncontrado, cursoEncontrado)
                          matriculas.add(matricula)
                       } else {
-                         println(" não há mais vagas disponíveis neste curso.")
+                         println("Nao ha mais vagas disponiveis neste curso.")
                       }
                    }
                 }
