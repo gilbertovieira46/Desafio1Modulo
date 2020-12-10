@@ -7,19 +7,19 @@ class DigitalHouseManager {
    private val matriculas = mutableListOf<Matricula>()
 
 
-   fun registrarCurso(nome: String, codigoCurso: Int,
+  fun registrarCurso(nome: String, codigoCurso: Int,
                       quantidadeMaximaDeAlunos: Int) {
       val curso = Curso(nome, codigoCurso, quantidadeMaximaDeAlunos)
-      cursos.add(curso)
-   }
-     fun excluirCurso(codigoCurso: Int) {
+      cursos.add(curso)}
+
+  fun excluirCurso(codigoCurso: Int) {
       for (curso in cursos) {
          if (curso.codCurso == codigoCurso) {
             cursos.remove(curso)
          }
       }
- }
-  fun registrarProfessorAdjunto(
+  }
+   fun registrarProfessorAdjunto(
                     nome: String, sobrenome: String,
                     codigoProfessor: Int, quantidadeDeHoras: Int) {
                val professorAdjunto = ProfessorAdj(nome, sobrenome,
@@ -27,7 +27,7 @@ class DigitalHouseManager {
                professores.add(professorAdjunto)
             }
 
-  fun registrarProfessorTitular(
+   fun registrarProfessorTitular(
                     nome: String, sobrenome: String,
                     codigoProfessor: Int, tempoDeCasa: Int, especialidade: String
             ) {
@@ -36,19 +36,18 @@ class DigitalHouseManager {
      professores.add(professorTitular)
   }
 
-       fun excluirProfessor(codigoProfessor: Int) {
+   fun excluirProfessor(codigoProfessor: Int) {
           for (prof in professores) {
              if (prof.codProfessor == codigoProfessor) {
                 professores.remove(prof)
 
-             }
-             fun criarAluno(nome: String, sobrenome: String, codigoAluno:
+       }      }}
+   fun criarAluno(nome: String, sobrenome: String, codigoAluno:
              Int) {
                 val aluno = Aluno(nome, sobrenome, codigoAluno)
                 alunos.add(aluno)
              }
-
-             fun matricularAluno(codigoAluno: Int, codigoCurso: Int) {
+   fun matricularAluno(codigoAluno: Int, codigoCurso: Int) {
                 var alunoEncontrado: Aluno? = null
                 var cursoEncontrado: Curso? = null
 
@@ -73,13 +72,13 @@ class DigitalHouseManager {
                    }
                 }
              }
-          }
- }
 
-         fun alocarProfessores(
-                 codigoCurso: Int,
-                 codigoProfessorTitular: Int, codigoProfessorAdjunto:
-                 Int
+
+
+   fun alocarProfessores(
+           codigoCurso: Int,
+           codigoProfessorTitular: Int,
+           codigoProfessorAdjunto: Int
          ) {
             var cursoEncontrado: Curso? = null
             var professorTitularEncontrado: ProfTitular? = null
@@ -108,8 +107,8 @@ class DigitalHouseManager {
                      println("Professor titular ${professorTitularEncontrado.nome} alocado no curso de ${cursoEncontrado.nome}")
                   }
                }
-            }
-         }}
+            }}}
+
 
 
 
